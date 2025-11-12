@@ -30,7 +30,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: |
-          python -m notion_sync.main sync
+          notion_sync sync
           
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
