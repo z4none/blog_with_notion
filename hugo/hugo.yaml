@@ -36,22 +36,16 @@ params:
     license:
       enabled: true
       default: Licensed under CC BY-NC-SA 4.0
+
   Comments:
     enabled: true
-    provider: giscus
-    giscus:
+    provider: utterances
+    utterances:
       repo: 'z4none/blog'
-      repoID: 'R_kgDOK2_9cQ'
-      category: 'Announcements'
-      categoryID: 'DIC_kwDOK2_9cc4CbkmV'
-      mapping: 'pathname'
-      strict: '0'
-      lightTheme: 'light'
-      darkTheme: 'noborder_gray'
-      reactionsEnabled: 1
-      emitMetadata: 0
-      inputPosition: 'bottom'
-      lang: 'zh-CN'
+      issueTerm: 'pathname'
+      label: 'comments'
+      theme: 'photon-dark'
+      crossorigin: 'anonymous'
   widgets:
     homepage: []
     page: [
