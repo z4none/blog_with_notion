@@ -6,6 +6,8 @@ on:
     paths:
       - 'hugo/**'
       - '.github/workflows/deploy.yml'
+      - 'notion_sync/**'
+  workflow_dispatch:    
 
 jobs:
   deploy:
