@@ -1,0 +1,130 @@
+baseURL: 'https://your-blog.vercel.app'
+languageCode: 'zh-cn'
+title: 'zi'
+theme: 'hugo-theme-stack'
+
+permalinks:
+  page:
+    posts: /:slug/
+
+# 配置
+params:
+  mainSections:
+    - posts
+    - Post
+  featuredImageField: image
+  rssFullContent: true
+  favicon: favicon.svg
+  DateFormat: 
+    published: "2006-01-02"
+    lastUpdated: "2006-01-02 15:04"
+  # 主题配置
+  sidebar:
+    emoji: 🍃
+    subtitle: 'a developer'
+    avatar:
+      enabled: true
+      local: true
+      src: avatar.jpg
+  footer:
+    since: 2013
+    customText: "-"
+  article:
+    math: false
+    toc: true
+    readingTime: false
+    license:
+      enabled: true
+      default: Licensed under CC BY-NC-SA 4.0
+  Comments:
+    enabled: true
+    provider: giscus
+    giscus:
+      repo: 'z4none/blog'
+      repoID: 'R_kgDOK2_9cQ'
+      category: 'Announcements'
+      categoryID: 'DIC_kwDOK2_9cc4CbkmV'
+      mapping: 'pathname'
+      strict: '0'
+      lightTheme: 'light'
+      darkTheme: 'noborder_gray'
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: 'bottom'
+      lang: 'zh-CN'
+  widgets:
+    homepage: []
+    page: [
+      {
+        type: 'toc',
+        params: {}          
+      }
+    ]
+# 菜单
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: -100
+      params:
+        icon: home
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: -90
+      params:
+        icon: user
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: -70
+      params:
+        icon: archives
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: -60
+      params:
+        icon: search
+
+# 分类和标签
+taxonomies:
+  tag: tags
+  category: categories
+
+# Markdown 配置
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: dracula
+    lineNos: true
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
+
+# 构建配置
+build:
+  writeStats: true
+
+# 输出配置
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+  section:
+    - HTML
+    - RSS
+
+# 隐私配置
+privacy:
+  vimeo:
+    disabled: true
+  youtube:
+    disabled: true
+

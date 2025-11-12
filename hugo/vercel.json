@@ -1,0 +1,21 @@
+{
+  "buildCommand": "hugo --minify",
+  "outputDirectory": "public",
+  "installCommand": "cd .. && uv sync",
+  "framework": "other",
+  "functions": {},
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "HUGO_VERSION": "latest"
+  },
+  "build": {
+    "env": {
+      "HUGO_ENV": "production"
+    }
+  }
+}

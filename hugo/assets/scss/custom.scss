@@ -1,0 +1,114 @@
+:root {
+  --small-card-padding: 15px;
+
+  @include respond(md) {
+    --small-card-padding: 15px;
+  }
+
+  --card-text-color-secondary: rgba(0, 0, 0, 0.5);
+}
+
+:root[data-scheme="dark"] {
+    --card-text-color-secondary: rgba(255, 255, 255, 0.5);
+}
+/* 自定义样式 - 首页文章列表 summary */
+
+.article-list {
+    .article-title {
+        font-size: 1.8rem;
+    }
+
+    .article-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+.main-article {
+    .article-title {
+        font-size: 2.2rem;
+    }
+
+    .article-subtitle {
+        display: none;
+    }
+
+    .article-content {
+        font-size: 90%;
+    }
+}
+
+.article-summary {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    
+    p {
+        color: var(--body-text-color);
+        opacity: 0.8;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2; /* 标准属性，提高兼容性 */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* 首页文章列表容器样式 */
+.article-list--detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    article {
+        background-color: var(--card-background);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color);
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .article-details {
+            padding: 1.5rem;
+        }
+    }
+}
+
+.widget.archives {
+    font-size: 90%;
+    .widget-icon {
+        display: none;
+    }
+
+    .widget--toc #TableOfContents{
+        padding: 12px 0;
+        ul {
+            list-style-type: none;
+            li {
+                margin: 0;
+                padding: 6px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                a {
+                    display: block;
+
+                    &:hover {
+                        background-color: var(--card-background);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination .page-link {
+    padding: 12px 16px;
+}
