@@ -1,6 +1,6 @@
 ---
-title: "Search"
-date: 2019-05-28
-layout: "search"
+title: "搜索"
 slug: "search"
+type: "page"
+layout: "search"
 ---

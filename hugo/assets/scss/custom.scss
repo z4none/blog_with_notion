@@ -112,3 +112,10 @@
 .pagination .page-link {
     padding: 12px 16px;
 }
+
+mark {
+    background-color: rgba(255, 255, 0, 0.3);
+    color: var(--body-text-color);
+    padding: 2px;
+    border-radius: 4px;
+}
