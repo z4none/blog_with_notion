@@ -1,6 +1,6 @@
-{{/* 从环境变量读取 Umami 配置，便于在 CI/CD 中注入 */}}
-{{- $umamiScript := getenv "UMAMI_SCRIPT_URL" -}}
-{{- $umamiWebsiteId := getenv "UMAMI_WEBSITE_ID" -}}
+{{/* 从环境变量读取 Umami 配置，便于在 CI/CD 中注入（Hugo 只允许读取以 HUGO_ 开头的变量） */}}
+{{- $umamiScript := getenv "HUGO_UMAMI_SCRIPT_URL" -}}
+{{- $umamiWebsiteId := getenv "HUGO_UMAMI_WEBSITE_ID" -}}
 
 {{- if and $umamiScript $umamiWebsiteId -}}
 <script defer src="{{ $umamiScript }}" data-website-id="{{ $umamiWebsiteId }}"></script>
