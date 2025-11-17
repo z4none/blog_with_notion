@@ -1,0 +1,7 @@
+{{/* 从环境变量读取 Umami 配置，便于在 CI/CD 中注入 */}}
+{{- $umamiScript := getenv "UMAMI_SCRIPT_URL" -}}
+{{- $umamiWebsiteId := getenv "UMAMI_WEBSITE_ID" -}}
+
+{{- if and $umamiScript $umamiWebsiteId -}}
+<script defer src="{{ $umamiScript }}" data-website-id="{{ $umamiWebsiteId }}"></script>
+{{- end -}}

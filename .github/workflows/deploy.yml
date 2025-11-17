@@ -37,6 +37,9 @@ jobs:
           extended: true
           
       - name: Build Hugo site
+        env:
+          UMAMI_SCRIPT_URL: ${{ secrets.UMAMI_SCRIPT_URL }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
         run: |
           cd hugo
           hugo --minify
